@@ -1,3 +1,4 @@
+
 terraform {
   required_providers {
     digitalocean = {
@@ -7,22 +8,16 @@ terraform {
 }
 
 provider "digitalocean" {
-  token = "dop_v1_a28892aadded52b2055e076d73ace37fb2753b587379c151052156b651b0646b"
+  token = "dop_v1_aea45bb62cac520b8367d31bca88458906ee11635f908b3eda0d03870bf4f623"
 }
 
 data "digitalocean_ssh_key" "terraform"{
   name="SSHTarea"
 }
 
-# resource "digitalocean_droplet" "example" {
-#   image  = "ubuntu-18-04-x64"
-#   name   = "web"
-#   region = "nyc1"
-#   size   = "s-1vcpu-1gb"
-
-resource "digitalocean_droplet" "jenkins" {
+resource "digitalocean_droplet" "Jenkins" {
   image  = "ubuntu-18-04-x64"
-  name   = "jenkins"
+  name   = "Jenkins"
   region = "nyc1"
   size   = "s-1vcpu-1gb"
   ssh_keys = [

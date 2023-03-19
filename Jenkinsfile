@@ -63,7 +63,7 @@ pipeline {
    stages {
       stage('Clone repository') {
          steps {
-            git 'https://github.com/usuario/repo.git'
+            git 'https://github.com/YamiGomez14/2do-Parcial-AlgoParalelos.git'
          }
       }
       stage('Initialize Terraform') {

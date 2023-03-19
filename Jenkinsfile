@@ -58,10 +58,14 @@
 // }
 
         
-
 pipeline {
    agent any
    stages {
+      stage('Clone repository') {
+         steps {
+            git 'https://github.com/usuario/repo.git'
+         }
+      }
       stage('Initialize Terraform') {
          steps {
             sh 'terraform init'
@@ -74,4 +78,3 @@ pipeline {
       }
    }
 }
-
